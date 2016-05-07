@@ -420,6 +420,9 @@ var sentences = [
 sentences = sentences.filter(function(s) {
     return s.split(',').length === 2;
 });
+sentences = sentences.filter(function(s) {
+    return s.split('.').length === 2;
+});
 
 function update() {
     var sentence1 = sentences[Math.floor(Math.random()*sentences.length)];
