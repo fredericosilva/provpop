@@ -153,13 +153,19 @@ function update() {
     var sentence1 = sentences[Math.floor(Math.random()*sentences.length)];
     var sentence2 = sentences[Math.floor(Math.random()*sentences.length)];
 
-    document.getElementById("part1").innerHTML = sentence1.split(',')[0] + ', ';
+    document.getElementById("part1").innerHTML = split(sentence1)[0] + ', ';
     document.getElementById("sentence1").innerHTML = sentence1;
     
-    document.getElementById("part2").innerHTML = sentence2.split(',')[1];
+    document.getElementById("part2").innerHTML = split(sentence2)[1];
     document.getElementById("sentence2").innerHTML = sentence2;
 }
 
+function split(sentence) {
+    if (sentence.indexOf('. ') !== -1) {
+        return sentence.split('. ');
+    }
 
+    return sentence.split(',');
+}
 
 // setInterval(update, 5000);
