@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            height: 100%;
+            padding: 0em 1em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: aliceblue;
+            font-size: 4.5vw;
+            text-align: center;
+        }
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            font-size: 3vw;
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            padding: 5px;
+            border-radius: 6px;
+         
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+            right: 0;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="update()">
+    <p>
+        <span class="tooltip">
+            <span id="part1" class="part"></span>
+            <span id="sentence1" class="tooltiptext"></span>
+        </span>
+        <span class="tooltip">
+            <span id="part2" class="part"></span>
+            <span id="sentence2" class="tooltiptext"></span>
+        </span>
+    </p>
+</body>
+</html>
