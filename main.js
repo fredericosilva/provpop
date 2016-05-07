@@ -433,10 +433,6 @@ function update() {
 }
 
 function split(sentence) {
-    if (sentence.indexOf('. ') !== -1) {
-        return sentence.split('. ');
-    }
-
     return sentence.split(',');
 }
 
