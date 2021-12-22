@@ -1465,6 +1465,12 @@ function update() {
     document.getElementById("sentence2").innerHTML = sentence2;
 }
 
+document.addEventListener('keyup', function(event) {
+    if (event.code === 'Space') {
+        update();
+    }
+});
+
 function split(sentence) {
     return sentence.split(',');
 }
